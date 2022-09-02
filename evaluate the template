@@ -1,0 +1,24 @@
+function sendEmailAlert(player,subject) {
+var player = [
+               ['Argentine','Aldosivi','César','Meli','Mid',0,0,0,' ankle',	'Mid '],
+               ['Argentine','Aldosivi','César','Meli','Mid',0,0,0,' ankle',	'Mid '],
+                ['Argentine','Aldosivi','César','Meli','Mid',0,0,0,' ankle',	'Mid '],
+                 ['Argentine','Aldosivi','César','Meli','Mid',0,0,0,' ankle',	'Mid '],
+                  ['Argentine','Aldosivi','César','Meli','Mid',0,0,0,' ankle',	'Mid '],
+             ]
+  var templ = HtmlService.createTemplateFromFile('Players');
+  
+  templ.player = player;
+  templ.title = subject //'NEW INJURY/SUSPENSION'
+  //var subject = 'NEW INJURY/SUSPENSION'
+  var message = templ.evaluate().getContent();
+  
+  MailApp.sendEmail({
+    to: reciepant,
+    subject: subject,
+    htmlBody: message
+  });
+  
+ 
+  
+}
