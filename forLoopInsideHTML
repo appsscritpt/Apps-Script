@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <base target="_top">
+  </head>
+  <body>
+    <h2><?= title ?></h2>
+    <p>
+ <table border=1>
+  <? for (var i = 0; i < player.length; i++) { ?>
+    <tr>
+       <? for (var j = 0; j < player[i].length; j++) { ?>
+            <td><?= player[i][j] ?></td>
+        <? } ?>    
+      </tr>
+  <? } ?>
+ </table >
+
+  </body>
+</html>
