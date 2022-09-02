@@ -9,16 +9,8 @@ var player = [
   var templ = HtmlService.createTemplateFromFile('Players');
   
   templ.player = player;
-  templ.title = subject //'NEW INJURY/SUSPENSION'
-  //var subject = 'NEW INJURY/SUSPENSION'
+  templ.title = TITLE
   var message = templ.evaluate().getContent();
-  
-  MailApp.sendEmail({
-    to: reciepant,
-    subject: subject,
-    htmlBody: message
-  });
-  
- 
-  
+   
 }
+// CHECK ATTACHED TEMPLATE -forLoopInsideHTML.HTML- FOR EVALUATION
